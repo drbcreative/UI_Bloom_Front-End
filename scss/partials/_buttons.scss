@@ -5,97 +5,183 @@
   transition: all 0.3s ease-in-out;
 }
 
-.ui-btn-group {
+// Unique buttons for Bloom
+.db-btn-white-ol {
+  border: 1px solid $color-white;
   width: 100%;
+  // height: 57px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 1rem 0;
-  @include isMedium {
-    flex-direction: row;
-  }
-
-  .ui-btn-right {
-    @include isMedium {
-      margin-right: 1rem;
-    }
-  }
-}
-/* General Button Style */
-@mixin ui-btn {
-  font-family: $font-secondary;
-  font-size: 1rem;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: 0.1rem;
-  line-height: 1rem;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  // width: auto;
-  padding: 1.3rem 1.5rem 1rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  margin-bottom: .5rem;
-  @include btn-fade;
-  @include isMedium {
-    // min-width: 220px;
-    // max-width: 329px;
-    margin-bottom: 0;
-    width: auto;
-    padding: 1.3rem 1.5rem 1rem 1.5rem;
-  }
-}
-/* Main Button Color ******************************************************** */
-.ui-btn-main {
-  @include ui-btn;
-  background-color: $color-main;
+  justify-content: center;
+  padding: 2rem 2rem;
   color: $color-white;
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .2rem;
+  position: relative;
+  @include isMedium {
+    max-width: 260px;
+  }
 
   &:hover {
-    text-decoration: none;
-    background-color: $color-accent;
-    color: $color-white;
+    background-color: $color-main;
+    transition: all .2s ease;
+  }
+
+  &::before {
+    content: url('../images/button-slant-white.svg');
+    position: absolute;
+    // left: 50%;
+    top: -2.2px;
+    // transform: translate(-50%, -50%);
+    transform: scale(1.4);
+  }
+  &::after {
+    content: url('../images/button-accent-white.svg');
+    position: absolute;
+    right: 2.5px;
+    bottom: 2.5px;
+    // transform: translate(-50%, -50%);
+    transform: scale(1.4);
   }
 }
 
-.ui-btn-main-ol {
-  @include ui-btn;
-  background: transparent;
-  border: 2px solid $color-main;
+.db-btn-main-ol {
+  border: 1px solid $color-main;
+  width: 100%;
+  // height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
   color: $color-main;
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .2rem;
+  position: relative;
+  transition: all .2s ease;
+  @include isMedium {
+    max-width: 260px;
+  }
 
   &:hover {
-    text-decoration: none;
-    background: $color-accent;
-    border: 2px solid $color-accent;
-    color: $color-white;
+    background-color: $color-main;
+    transition: all .2s ease;
+  }
+
+  &::before {
+    content: url('../images/button-slant-blue.svg');
+    position: absolute;
+    // left: 50%;
+    top: -2.2px;
+    // transform: translate(-50%, -50%);
+    transform: scale(1.4);
+  }
+  &::after {
+    content: url('../images/button-accent-blue.svg');
+    position: absolute;
+    right: 2.5px;
+    bottom: 2.5px;
+    // transform: translate(-50%, -50%);
+    transform: scale(1.4);
   }
 }
 
-.ui-btn-white {
-  @include ui-btn;
-  background-color: $color-white;
-  color: $color-main;
-
-  &:hover {
-    text-decoration: none;
-    background-color: $color-accent;
-    color: $color-white;
-  }
-}
-
-.ui-btn-white-ol {
-  @include ui-btn;
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-
-  &:hover {
-    text-decoration: none;
-    background: $color-accent;
-    border: 2px solid $color-accent;
-    color: $color-white;
-  }
-}
+// .ui-btn-group {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin: 1rem 0;
+//   @include isMedium {
+//     flex-direction: row;
+//   }
+//
+//   .ui-btn-right {
+//     @include isMedium {
+//       margin-right: 1rem;
+//     }
+//   }
+// }
+/* General Button Style */
+// @mixin ui-btn {
+//   font-family: $font-secondary;
+//   font-size: 1rem;
+//   font-weight: 600;
+//   font-style: normal;
+//   letter-spacing: 0.1rem;
+//   line-height: 1rem;
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   // width: auto;
+//   padding: 1.3rem 1.5rem 1rem 1.5rem;
+//   border-radius: 50px;
+//   text-decoration: none;
+//   margin-bottom: .5rem;
+//   @include btn-fade;
+//   @include isMedium {
+//     // min-width: 220px;
+//     // max-width: 329px;
+//     margin-bottom: 0;
+//     width: auto;
+//     padding: 1.3rem 1.5rem 1rem 1.5rem;
+//   }
+// }
+/* Main Button Color ******************************************************** */
+// .ui-btn-main {
+//   @include ui-btn;
+//   background-color: $color-main;
+//   color: $color-white;
+//
+//   &:hover {
+//     text-decoration: none;
+//     background-color: $color-accent;
+//     color: $color-white;
+//   }
+// }
+//
+// .ui-btn-main-ol {
+//   @include ui-btn;
+//   background: transparent;
+//   border: 2px solid $color-main;
+//   color: $color-main;
+//
+//   &:hover {
+//     text-decoration: none;
+//     background: $color-accent;
+//     border: 2px solid $color-accent;
+//     color: $color-white;
+//   }
+// }
+//
+// .ui-btn-white {
+//   @include ui-btn;
+//   background-color: $color-white;
+//   color: $color-main;
+//
+//   &:hover {
+//     text-decoration: none;
+//     background-color: $color-accent;
+//     color: $color-white;
+//   }
+// }
+//
+// .ui-btn-white-ol {
+//   @include ui-btn;
+//   background: transparent;
+//   border: 2px solid #fff;
+//   color: #fff;
+//
+//   &:hover {
+//     text-decoration: none;
+//     background: $color-accent;
+//     border: 2px solid $color-accent;
+//     color: $color-white;
+//   }
+// }

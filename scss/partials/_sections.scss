@@ -1,4 +1,124 @@
 /* ************************************************************************** */
 /* Main Page Sections ******************************************************* */
 /* ************************************************************************** */
+
+main {
+  // height: 500vh;
+}
+
 // hero
+.hero {
+  position: relative;
+
+  @include isXLarge {
+    padding: 40px 20px;
+  }
+  @include isRetina {
+    padding: 50px 0;
+  }
+
+
+  .containerish {
+    background: url('../images/hero-bg@2x.jpg') center center / cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px;
+    position: relative;
+
+    @include isXLarge {
+      height: 90vh;
+    }
+    @include isRetina {
+      padding: 60px 0;
+      overflow: visible;
+    }
+
+// event
+.event {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  z-index: 999;
+
+  @include isXLarge {
+    top: initial;
+    bottom: 0;
+    right: 0;
+  }
+
+  @include isRetina {
+    top: initial;
+    bottom: -17px;
+    right: -18px;
+  }
+
+
+  &::before {
+    content: url('../images/event-shadow-left.svg');
+    position: absolute;
+    left: -18px;
+    bottom: -6px;
+    display: none;
+    @include isRetina {
+      display: block;
+    }
+  }
+  &::after {
+    content: url('../images/event-shadow-right.svg');
+    position: absolute;
+    right: 0;
+    top: -17px;
+    display: none;
+    @include isRetina {
+      display: block;
+    }
+  }
+
+  .event-left {
+    padding: 1rem;
+    background: $color-white;
+    text-align: center;
+
+  }
+  .event-right {
+    padding: 1rem;
+    background: $color-main;
+    align-self: stretch;
+    .event-copy {
+      line-height: 1.3rem;
+    }
+
+  }
+  .event-copy {
+    font-family: $font-secondary;
+    font-size: 15px;
+    &.event-month {
+      font-size: 12px;
+    }
+    .event-day {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+  }
+}
+// end event
+
+    .sec-info {
+      max-width: 950px;
+      text-align: center;
+      p {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+      .db-btn-white-ol {
+        margin: 0 auto;
+      }
+    }
+  }
+}

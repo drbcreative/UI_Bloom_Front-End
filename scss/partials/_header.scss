@@ -4,7 +4,7 @@ header#header-container {
   width: 100%;
   background-size: cover;
   background-position: 50%;
-  font-family: $font-secondary;
+  font-family: $font-primary;
   z-index: 124;
 
   nav.tb-links {
@@ -13,39 +13,67 @@ header#header-container {
 
   section.top-bar {
     display: none;
-
     @include isXLarge {
       display: block;
     }
-    .containerish-fluid {
-      display: flex;
-      justify-content: flex-end;
+
+    .containerish {
+      display: grid;
+      grid-template-columns: max-content 1fr max-content;
       align-items: center;
-      padding: 50px 30px;
+      padding: 10px 20px;
       position: absolute;
       top: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 100%;
+      @include isRetina {
+        padding: 15px 0;
+      }
+
+      .top-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .top-center {
+        display: flex;
+        justify-content: center;
+        .topbar-link {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+      }
+
+      .top-right {
+        .topbar-link {
+          margin-left: 1rem;
+        }
+      }
 
       .topbar-link {
         color: $color-white;
         text-decoration: none;
-        margin-left: 2rem;
+        // margin-left: 2rem;
         font-size: 14px;
-        font-family: $font-secondary;
+        font-family: $font-primary;
+        font-weight: 400;
 
         &:hover {
           color: $color-accent;
         }
       }
+
       a.social-link svg {
         height: 20px;
         color: $color-white;
-        transition: all .3s ease;
-        margin-left: 1rem;
+        transition: all 0.3s ease;
+        margin-right: 1rem;
 
         &:hover {
           color: $color-accent;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
         }
       }
     }
@@ -55,23 +83,30 @@ header#header-container {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    padding: 30px 0 0 30px;
+    padding: 10px 0 10px 15px;
     background: $color-main;
     @include isLarge {
       padding: 20px 0 20px 30px;
     }
     @include isXLarge {
       background: transparent;
-      padding: 30px 15px 0 30px;
+      // padding: 65px 15px 0 30px;
+      padding: 65px 30px 0 45px;
+    }
+    @include isRetina {
+      padding: 75px 20px 0 35px;
     }
 
     .logonav {
-      max-width: 50px;
+      width: 150px;
       @include isLarge {
-        max-width: 100px;
+        width: 100px;
       }
       @include isXLarge {
-        max-width: 161px;
+        width: calc(315px / 1.2);
+      }
+      @include isRetina {
+        width: 315px;
       }
     }
 
@@ -82,7 +117,7 @@ header#header-container {
 }
 
 .navbaritems {
-  margin: 30px 0 0;
+  // margin: 30px 0 0;
 }
 
 .navbaritems.activemenu {
@@ -100,6 +135,7 @@ header#header-container {
 .bars span.bar {
   transition: all 0.3s;
 }
+
 .nav-divider {
   display: none;
   @include isXLarge {
@@ -127,12 +163,11 @@ nav.navdiv {
     li.menu-item {
       position: relative;
       margin: 0 0 10px;
-
       @include isXLarge {
         margin-bottom: 0;
       }
       @include isRetina {
-        margin: 0 10px 0 10px;
+        margin: 0 10px;
       }
 
       &.active {
@@ -140,17 +175,18 @@ nav.navdiv {
           color: $color-main;
         }
       }
+
       &.menu-item:last-child {
         margin-right: 0;
       }
 
       a.menu-link {
         display: block;
-        font-size: 1rem;
+        font-size: 15px;
         color: #fff;
         text-transform: uppercase;
         text-decoration: none;
-        font-weight: 300;
+        font-weight: 700;
         letter-spacing: 0.5px;
         padding: 0 30px;
         @include isXLarge {
@@ -263,8 +299,7 @@ nav.navdiv {
     }
   }
 }
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   nav.navdiv .closebutton {
     display: block;
   }
@@ -300,7 +335,7 @@ nav.navdiv {
     width: 30px;
     height: 2px;
     margin: 8px 0;
-    background: #d88d41;
+    background: $color-white;
   }
 
   nav.navdiv ul.items {

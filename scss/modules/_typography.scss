@@ -21,17 +21,17 @@ h5 h6 {
 /* Primary Header */
 h1 {
   font-family: $font-secondary;
-  font-size: 4.063; // 65px
-  line-height: 4.063;
-  font-weight: 600;
+  font-size: 4.063rem; // 65px
+  line-height: 4.063rem;
+  font-weight: 400;
 
 }
 
 h2 {
   font-family: $font-secondary;
   font-size: 3.75; // 60px
-  line-height: 3.75;
-  font-weight: 600;
+  line-height: 3.75rem;
+  font-weight: 400;
 
   &.is-light {
     font-weight: 300 !important;
@@ -42,9 +42,9 @@ h2 {
 }
 h3 {
   font-family: $font-secondary;
-  font-size: 2.813; // 60px
-  line-height: 2.813;
-  font-weight: 600;
+  font-size: 2.813rem; // 60px
+  line-height: 2.813rem;
+  font-weight: 400;
 
   &.is-light {
     font-weight: 300 !important;
