@@ -250,6 +250,14 @@ main {
     display: grid;
     grid-gap: 2rem;
     padding: 40px;
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: darken($color-main, 20);
+      }
+    }
     @include isMedium {
       grid-template-columns: 1fr 1fr;
       align-items: center;
@@ -363,6 +371,7 @@ main {
 
       .sec-info-images {
         display: flex;
+        justify-content: space-around;
         margin-bottom: 2rem;
         @include isMedium {
           justify-content: space-between;
@@ -373,7 +382,12 @@ main {
         }
 
         img {
-          max-width: 203px;
+          max-height: 175px;
+          width: auto;
+
+          @include isMedium {
+            max-height: 257px;
+          }
         }
       }
 
@@ -492,6 +506,7 @@ main {
     }
   }
 }
+
 // facials
 .facials {
   position: relative;
@@ -518,20 +533,23 @@ main {
         margin: 0 auto;
       }
       @include isLarge {
-        // grid-column: 2;
-        // justify-self: flex-start;
-        // margin: 0;
         padding: 20px 20px 60px;
         position: absolute;
-        right: 0;
+        right: 60px;
         bottom: -50px;
       }
       @include isXLarge {
         bottom: -70px;
+        right: 60px;
+
+      @include isRetina {
+        right: 0;
       }
+    }
 
       .sec-info-images {
         display: flex;
+        justify-content: space-around;
         margin-bottom: 2rem;
         @include isMedium {
           justify-content: space-between;
@@ -542,7 +560,12 @@ main {
         }
 
         img {
-          max-width: 203px;
+          max-height: 175px;
+          width: auto;
+
+          @include isMedium {
+            max-height: 257px;
+          }
         }
       }
 
