@@ -461,3 +461,30 @@ main {
     }
   }
 }
+
+// testimonial
+.testimonial {
+  .containerish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+
+    @include isMedium {
+      padding: 60px 40px;
+    }
+    @include isXLarge {
+      padding: 80px 40px;
+    }
+
+    img {
+      width: 108.3px;
+      height: 97.9px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 1155px;
+    }
+  }
+}

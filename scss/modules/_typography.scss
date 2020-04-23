@@ -79,6 +79,17 @@ h4, h5, h6 {
   }
 }
 
+.testimonial-copy {
+  font-size: 30px; // 18px
+  line-height: calc(30px * 2);
+  font-family: $font-primary;
+  font-weight: 700;
+
+  &.is-italic {
+    font-style: italic;
+  }
+}
+
 /* Lead Text (hero) */
 .lead-copy {
   font-size: 1.125rem; // 18px
