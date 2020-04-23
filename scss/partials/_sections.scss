@@ -488,3 +488,71 @@ main {
     }
   }
 }
+
+// facials
+.facials {
+  position: relative;
+    background: url("../images/facials-bg@2x.jpg") center center / cover;
+  .containerish {
+
+    padding: 20px;
+    position: relative;
+    @include isMedium {
+      padding: 80px 0;
+    }
+    @include isLarge {
+      height: 687px;
+      padding: 150px 60px 80px 0;
+      overflow: visible;
+    }
+
+    .sec-info-wrapper {
+      position: relative;
+      background: $color-white;
+      padding: 20px 20px 40px;
+      @include isMedium {
+        max-width: 462px;
+        margin: 0 auto;
+      }
+      @include isLarge {
+        // grid-column: 2;
+        // justify-self: flex-start;
+        // margin: 0;
+        padding: 20px 20px 60px;
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+      }
+      @include isXLarge {
+        bottom: -70px;
+      }
+
+      .sec-info-images {
+        display: flex;
+        margin-bottom: 2rem;
+        @include isMedium {
+          justify-content: space-between;
+          margin-top: -50px;
+        }
+        @include isLarge {
+          margin-top: -70px;
+        }
+
+        img {
+          max-width: 203px;
+        }
+      }
+
+      .sec-info {
+        @include isRetina {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}
+
+// social
+.social {
+  height: 1500px;
+}
