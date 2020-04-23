@@ -122,3 +122,145 @@ main {
     }
   }
 }
+
+// services
+.services {
+// padding-top: 2rem;
+@include isLarge {
+  margin-top: 2rem;
+}
+@include isXLarge {
+  margin-top: 0;
+  padding: 40px 20px;
+}
+@include isRetina {
+  margin-top: 3rem;
+  padding: 40px 20px;
+}
+  .containerish {
+    height: inherit;
+    display: grid;
+    background: url('../images/service-bg@2x.jpg') top left / cover;
+    padding-top: 40px;
+
+    @include isLarge {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include isRetina {
+      overflow: visible;
+    }
+
+    .serv-img {
+      padding: 0 30px;
+      @include isLarge {
+        grid-row: 1;
+        padding: 0 20px;
+      }
+      @include isRetina {
+        position: relative;
+        grid-row: 1;
+        padding: 0 20px;
+        height: 616px;
+      }
+      img {
+        box-shadow: 0 0 50px rgba($color-black, .16);
+        @include isRetina {
+          position: absolute;
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+    .serv-img:nth-child(1) {
+      img {
+        @include isRetina {
+          transform: rotate(-15deg);
+        }
+      }
+    }
+    .serv-img:nth-child(5) {
+      img {
+        @include isRetina {
+          transform: rotate(15deg);
+        }
+      }
+    }
+    .serv-img:nth-child(3) {
+      img {
+        @include isRetina {
+          // transform: rotate(15deg);
+          top: -75px;
+          z-index: 99999;
+        }
+      }
+    }
+    .serv-info {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .juvaderm-info, .kybella-info {
+      p {
+        flex: 1;
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+// about us
+.aboutus {
+  background: url('../images/about-bg@2x.jpg') center center / cover;
+  // padding: 40px;
+  position: relative;
+  @include isMedium {
+    margin-top: 2rem;
+  }
+
+  .sec-img {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 370px;
+
+    @include isMedium {
+      top: initial;
+      left: -0%;
+      bottom: 0;
+      width: 725px;
+    }
+    @include isLarge {
+      left: 12%;
+      bottom: 0;
+    }
+    @include isXLarge {
+      left: 18%;
+      bottom: 0;
+    }
+    @include isGiant {
+      left: 30%;
+    }
+  }
+  .containerish {
+    display: grid;
+    grid-gap: 2rem;
+    padding: 40px;
+
+    @include isMedium {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+    @include isXLarge {
+      height: 780px;
+    }
+    .sec-empty {
+      height: 400px;
+    }
+  }
+}
+// newsletter
+.newsletter {
+  height: 1500px;
+}
