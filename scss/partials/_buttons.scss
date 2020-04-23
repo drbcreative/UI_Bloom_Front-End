@@ -91,6 +91,50 @@
   }
 }
 
+.db-btn-main {
+  border: 1px solid $color-main;
+  background-color: $color-main;
+  width: 100%;
+  // height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+  color: $color-white;
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .2rem;
+  position: relative;
+  transition: all .2s ease;
+  @include isMedium {
+    max-width: 260px;
+  }
+
+  &:hover {
+    background-color: lighten($color-main, 20);
+    transition: all .2s ease;
+  }
+
+  &::before {
+    content: url('../images/button-slant-blue.svg');
+    position: absolute;
+    // left: 50%;
+    top: -2.2px;
+    // transform: translate(-50%, -50%);
+    transform: scale(1.4);
+  }
+  &::after {
+    content: url('../images/button-accent-white.svg');
+    position: absolute;
+    right: 2.5px;
+    bottom: 2.5px;
+    // transform: translate(-50%, -50%);
+    transform: scale(1.4);
+  }
+}
+
 // simple btns
 .db-book-btn {
   color: $color-dark;

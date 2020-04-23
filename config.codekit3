@@ -216,7 +216,7 @@
 		"oAP": "/images/emsculp-img-1@2x.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/emsculp-img-2@2x.jpg": {
@@ -227,7 +227,7 @@
 		"oAP": "/images/emsculp-img-2@2x.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/emsculpe-bg@2x.jpg": {

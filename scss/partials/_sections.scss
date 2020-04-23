@@ -262,5 +262,111 @@ main {
 }
 // newsletter
 .newsletter {
-  height: 1500px;
+  background: url('../images/newsletter-bg@2x.jpg') center center / cover;
+  .containerish {
+    padding: 40px;
+    text-align: center;
+
+    @include isLarge {
+      padding: 60px 40px;
+    }
+    @include isXLarge {
+      padding: 80px 40px;
+    }
+    @include isRetina {
+      padding: 100px 40px;
+    }
+
+    #newsletter {
+      display: grid;
+      grid-gap: .5rem;
+
+      @include isLarge {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+      }
+      @include isXLarge {
+        grid-template-columns: 1fr 1fr 260px;
+        grid-gap: 1rem;
+      }
+
+      input {
+        height: 64px;
+        padding: 1rem;
+        font-family: $font-primary;
+        font-size: 1rem;
+      }
+      input:nth-child(2) {
+        margin-bottom: 2rem;
+        @include isLarge {
+          margin-bottom: 0;
+        }
+      }
+      a.db-btn-main {
+        @include isLarge {
+          height: 60px;
+          border: none;
+          &::before {
+            content: url('../images/button-slant-blue.svg');
+            position: absolute;
+            top: -9.2px;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// emsculpt
+.emsculpt {
+  .containerish {
+    background: url('../images/emsculpe-bg@2x.jpg') center center / cover;
+    padding: 20px;
+
+    @include isMedium {
+      padding: 80px 0
+    }
+    @include isLarge {
+      padding: 120px 0 80px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .sec-info-wrapper {
+      position: relative;
+      background: $color-white;
+      padding: 20px 20px 40px 20px;
+
+      @include isMedium {
+        max-width: 462px;
+        margin: 0 auto;
+      }
+      @include isLarge {
+        justify-self: flex-start;
+        margin: 0;
+        padding: 20px 20px 60px 20px;
+      }
+      .sec-info-images {
+        display: flex;
+        margin-bottom: 2rem;
+        @include isMedium {
+          justify-content: space-between;
+          margin-top: -50px;
+        }
+        @include isLarge {
+          margin-top: -70px;
+        }
+
+        img {
+          max-width: 203px;
+        }
+      }
+      .sec-info {
+        @include isRetina {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
 }
