@@ -1,15 +1,12 @@
 /* ************************************************************************** */
 /* Main Page Sections ******************************************************* */
 /* ************************************************************************** */
-
 main {
   // height: 500vh;
 }
-
 // hero
 .hero {
   position: relative;
-
   @include isXLarge {
     padding: 40px 20px;
   }
@@ -17,16 +14,14 @@ main {
     padding: 50px 0;
   }
 
-
   .containerish {
-    background: url('../images/hero-bg@2x.jpg') center center / cover;
+    background: url("../images/hero-bg@2x.jpg") center center / cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding: 40px;
     position: relative;
-
     @include isXLarge {
       height: 90vh;
     }
@@ -34,115 +29,115 @@ main {
       padding: 60px 0;
       overflow: visible;
     }
+    // event
+    .event {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      align-items: center;
+      z-index: 999;
+      @include isXLarge {
+        top: initial;
+        bottom: 0;
+        right: 0;
+      }
+      @include isRetina {
+        top: initial;
+        bottom: -17px;
+        right: -18px;
+      }
 
-// event
-.event {
-  position: absolute;
-  top: 100px;
-  right: 0;
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  align-items: center;
-  z-index: 999;
+      &::before {
+        content: url("../images/event-shadow-left.svg");
+        position: absolute;
+        left: -18px;
+        bottom: -6px;
+        display: none;
+        @include isRetina {
+          display: block;
+        }
+      }
 
-  @include isXLarge {
-    top: initial;
-    bottom: 0;
-    right: 0;
-  }
+      &::after {
+        content: url("../images/event-shadow-right.svg");
+        position: absolute;
+        right: 0;
+        top: -17px;
+        display: none;
+        @include isRetina {
+          display: block;
+        }
+      }
 
-  @include isRetina {
-    top: initial;
-    bottom: -17px;
-    right: -18px;
-  }
+      .event-left {
+        padding: 1rem;
+        background: $color-white;
+        text-align: center;
+      }
 
+      .event-right {
+        padding: 1rem;
+        background: $color-main;
+        align-self: stretch;
 
-  &::before {
-    content: url('../images/event-shadow-left.svg');
-    position: absolute;
-    left: -18px;
-    bottom: -6px;
-    display: none;
-    @include isRetina {
-      display: block;
+        .event-copy {
+          line-height: 1.3rem;
+        }
+      }
+
+      .event-copy {
+        font-family: $font-secondary;
+        font-size: 15px;
+
+        &.event-month {
+          font-size: 12px;
+        }
+
+        .event-day {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
     }
-  }
-  &::after {
-    content: url('../images/event-shadow-right.svg');
-    position: absolute;
-    right: 0;
-    top: -17px;
-    display: none;
-    @include isRetina {
-      display: block;
-    }
-  }
-
-  .event-left {
-    padding: 1rem;
-    background: $color-white;
-    text-align: center;
-
-  }
-  .event-right {
-    padding: 1rem;
-    background: $color-main;
-    align-self: stretch;
-    .event-copy {
-      line-height: 1.3rem;
-    }
-
-  }
-  .event-copy {
-    font-family: $font-secondary;
-    font-size: 15px;
-    &.event-month {
-      font-size: 12px;
-    }
-    .event-day {
-      font-size: 30px;
-      font-weight: 700;
-    }
-
-  }
-}
-// end event
+    // end event
 
     .sec-info {
       max-width: 950px;
       text-align: center;
+
       p {
         max-width: 90%;
         margin: 0 auto;
       }
+
       .db-btn-white-ol {
         margin: 0 auto;
       }
     }
   }
 }
-
 // services
 .services {
-// padding-top: 2rem;
-@include isLarge {
-  margin-top: 2rem;
-}
-@include isXLarge {
-  margin-top: 0;
-  padding: 40px 20px;
-}
-@include isRetina {
-  margin-top: 3rem;
-  padding: 40px 20px;
-}
+  // padding-top: 2rem;
+  @include isLarge {
+    margin-top: 2rem;
+  }
+  @include isXLarge {
+    margin-top: 0;
+    padding: 40px 20px;
+  }
+  @include isRetina {
+    margin-top: 3rem;
+    padding: 40px 20px;
+  }
+
   .containerish {
     height: inherit;
     display: grid;
-    background: url('../images/service-bg@2x.jpg') top left / cover;
+    background: url("../images/service-bg@2x.jpg") top left / cover;
     padding-top: 40px;
-
     @include isLarge {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -162,6 +157,7 @@ main {
         padding: 0 20px;
         height: 616px;
       }
+
       img {
         box-shadow: 0 0 50px rgba($color-black, .16);
         @include isRetina {
@@ -171,6 +167,7 @@ main {
         }
       }
     }
+
     .serv-img:nth-child(1) {
       img {
         @include isRetina {
@@ -178,6 +175,7 @@ main {
         }
       }
     }
+
     .serv-img:nth-child(5) {
       img {
         @include isRetina {
@@ -185,6 +183,7 @@ main {
         }
       }
     }
+
     .serv-img:nth-child(3) {
       img {
         @include isRetina {
@@ -194,13 +193,16 @@ main {
         }
       }
     }
+
     .serv-info {
       padding: 40px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
     }
-    .juvaderm-info, .kybella-info {
+
+    .juvaderm-info,
+    .kybella-info {
       p {
         flex: 1;
         align-self: flex-start;
@@ -208,10 +210,9 @@ main {
     }
   }
 }
-
 // about us
 .aboutus {
-  background: url('../images/about-bg@2x.jpg') center center / cover;
+  background: url("../images/about-bg@2x.jpg") center center / cover;
   // padding: 40px;
   position: relative;
   @include isMedium {
@@ -224,7 +225,6 @@ main {
     left: 50%;
     transform: translateX(-50%);
     width: 370px;
-
     @include isMedium {
       top: initial;
       left: -0%;
@@ -243,11 +243,11 @@ main {
       left: 30%;
     }
   }
+
   .containerish {
     display: grid;
     grid-gap: 2rem;
     padding: 40px;
-
     @include isMedium {
       grid-template-columns: 1fr 1fr;
       align-items: center;
@@ -255,18 +255,20 @@ main {
     @include isXLarge {
       height: 780px;
     }
+
     .sec-empty {
       height: 400px;
     }
   }
 }
 // newsletter
+
 .newsletter {
-  background: url('../images/newsletter-bg@2x.jpg') center center / cover;
+  background: url("../images/newsletter-bg@2x.jpg") center center / cover;
+
   .containerish {
     padding: 40px;
     text-align: center;
-
     @include isLarge {
       padding: 60px 40px;
     }
@@ -279,8 +281,7 @@ main {
 
     #newsletter {
       display: grid;
-      grid-gap: .5rem;
-
+      grid-gap: 0.5rem;
       @include isLarge {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
@@ -296,18 +297,21 @@ main {
         font-family: $font-primary;
         font-size: 1rem;
       }
+
       input:nth-child(2) {
         margin-bottom: 2rem;
         @include isLarge {
           margin-bottom: 0;
         }
       }
+
       a.db-btn-main {
         @include isLarge {
           height: 60px;
           border: none;
+
           &::before {
-            content: url('../images/button-slant-blue.svg');
+            content: url("../images/button-slant-blue.svg");
             position: absolute;
             top: -9.2px;
             transform: scale(1.1);
@@ -317,27 +321,33 @@ main {
     }
   }
 }
-
 // emsculpt
 .emsculpt {
-  .containerish {
-    background: url('../images/emsculpe-bg@2x.jpg') center center / cover;
-    padding: 20px;
+  position: relative;
+  @include isXLarge {
+    max-height: 600px;
+    padding: 0 20px;
+  }
 
+  .containerish {
+    background: url("../images/emsculpe-bg@2x.jpg") center center / cover;
+    padding: 20px;
     @include isMedium {
-      padding: 80px 0
+      padding: 80px 0;
     }
     @include isLarge {
       padding: 120px 0 80px 60px;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+    @include isXLarge {
+      height: auto;
+    }
 
     .sec-info-wrapper {
       position: relative;
       background: $color-white;
-      padding: 20px 20px 40px 20px;
-
+      padding: 20px 20px 40px;
       @include isMedium {
         max-width: 462px;
         margin: 0 auto;
@@ -345,8 +355,9 @@ main {
       @include isLarge {
         justify-self: flex-start;
         margin: 0;
-        padding: 20px 20px 60px 20px;
+        padding: 20px 20px 60px;
       }
+
       .sec-info-images {
         display: flex;
         margin-bottom: 2rem;
@@ -362,9 +373,89 @@ main {
           max-width: 203px;
         }
       }
+
       .sec-info {
         @include isRetina {
           margin-top: 3rem;
+        }
+      }
+    }
+  }
+}
+// therapies
+.therapies {
+  background: url("../images/ivtherapies-bg@2x.jpg") center center / cover;
+  @include isXLarge {
+    padding-top: 20rem;
+    padding-bottom: 4rem;
+  }
+
+  .containerish {
+    padding: 40px;
+    display: grid;
+    grid-gap: 4rem;
+    @include isLarge {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+    }
+    @include isRetina {
+      overflow: visible;
+      grid-gap: 0;
+      padding: 40px 0;
+    }
+
+    .sec-link-white {
+      color: $color-main;
+    }
+
+    img {
+      margin-bottom: 2rem;
+    }
+
+    p.body-copy {
+      max-width: 500px;
+    }
+
+    .therapies-left {
+      @include isXLarge {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          transform: rotate(-6deg);
+          max-width: 557px;
+          align-self: flex-start;
+          margin: 4rem 0;
+        }
+      }
+      @include isRetina {
+        .sec-info {
+          padding: 2rem;
+        }
+        img {
+          // margin-left: -20px;
+        }
+      }
+    }
+
+    .therapies-right {
+      @include isXLarge {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          transform: rotate(6deg);
+          max-width: 557px;
+          align-self: flex-end;
+          margin: 4rem 0;
+        }
+      }
+      @include isRetina {
+        .sec-info {
+          padding: 2rem;
+        }
+        img {
+          // margin-right: -20px;
         }
       }
     }

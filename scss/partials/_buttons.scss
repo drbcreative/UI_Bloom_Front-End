@@ -4,7 +4,6 @@
 @mixin btn-fade {
   transition: all 0.3s ease-in-out;
 }
-
 // Unique buttons for Bloom
 .db-btn-white-ol {
   border: 1px solid $color-white;
@@ -13,33 +12,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 2rem;
   color: $color-white;
   font-family: $font-primary;
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   position: relative;
   @include isMedium {
     max-width: 260px;
   }
 
   &:hover {
-    background-color: $color-main;
-    transition: all .2s ease;
+    background-color: darken($color-main, 10);
+    transition: all 0.2s ease;
   }
 
   &::before {
-    content: url('../images/button-slant-white.svg');
+    content: url("../images/button-slant-white.svg");
     position: absolute;
     // left: 50%;
     top: -2.2px;
     // transform: translate(-50%, -50%);
     transform: scale(1.4);
   }
+
   &::after {
-    content: url('../images/button-accent-white.svg');
+    content: url("../images/button-accent-white.svg");
     position: absolute;
     right: 2.5px;
     bottom: 2.5px;
@@ -55,34 +55,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 2rem;
   color: $color-main;
   font-family: $font-primary;
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   position: relative;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   @include isMedium {
     max-width: 260px;
   }
 
   &:hover {
     background-color: $color-main;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
+    color: $color-white;
   }
 
   &::before {
-    content: url('../images/button-slant-blue.svg');
+    content: url("../images/button-slant-blue.svg");
     position: absolute;
     // left: 50%;
     top: -2.2px;
     // transform: translate(-50%, -50%);
     transform: scale(1.4);
   }
+
   &::after {
-    content: url('../images/button-accent-blue.svg');
+    content: url("../images/button-accent-blue.svg");
     position: absolute;
     right: 2.5px;
     bottom: 2.5px;
@@ -99,34 +101,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 2rem;
   color: $color-white;
   font-family: $font-primary;
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   position: relative;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   @include isMedium {
     max-width: 260px;
   }
 
   &:hover {
     background-color: lighten($color-main, 20);
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
 
   &::before {
-    content: url('../images/button-slant-blue.svg');
+    content: url("../images/button-slant-blue.svg");
     position: absolute;
     // left: 50%;
     top: -2.2px;
     // transform: translate(-50%, -50%);
     transform: scale(1.4);
   }
+
   &::after {
-    content: url('../images/button-accent-white.svg');
+    content: url("../images/button-accent-white.svg");
     position: absolute;
     right: 2.5px;
     bottom: 2.5px;
@@ -134,29 +137,27 @@
     transform: scale(1.4);
   }
 }
-
 // simple btns
 .db-book-btn {
   color: $color-dark;
   font-family: $font-primary;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   text-decoration: none;
   position: relative;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     color: $color-main;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   &::after {
-    content: url('../images/small-chevron-right.svg');
+    content: url("../images/small-chevron-right.svg");
     position: absolute;
-    margin-left: .8rem;
+    margin-left: 0.8rem;
   }
-
 }
 // .ui-btn-group {
 //   width: 100%;
